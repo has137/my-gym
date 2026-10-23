@@ -116,5 +116,7 @@ export default defineConfig({
       } : {})
     }
   },
-  build: { chunkSizeWarningLimit: 1500 }
+  build: { chunkSizeWarningLimit: 1500 },
+  // My gym: openGym's own suites test openGym as upstream ships it (src/mygym/index.js MG).
+  test: { env: { VITE_MYGYM: '0' } }
 })

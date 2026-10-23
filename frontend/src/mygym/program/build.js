@@ -58,8 +58,18 @@ export function slotEntry(slot, ctx = {}) {
   return shaped
 }
 
-/** All work entries of a session. */
-export const sessionEntries = (key, ctx) => SESSIONS[key].work.map(slot => slotEntry(slot, ctx))
+/**
+ * A session's routine entries: its (at most four) resistance exercises, then any protection
+ * exercise that has its own ladder (the knee ladder in D). Protection is logged like any set so
+ * the ladder rule can read it, and the routine note says what it is.
+ */
+export function sessionEntries(key, ctx) {
+  const s = SESSIONS[key]
+  const work = s.work.map(slot => slotEntry(slot, ctx))
+  const protect = (s.finish || []).filter(f => f.kind === 'protect' && f.ladder)
+    .map(f => ({ ...slotEntry({ slot: 'P', ladder: f.ladder, restSec: f.restSec, rir: '2', alt: {} }, ctx), mgProtect: f.joint }))
+  return [...work, ...protect]
+}
 
 /**
  * Write the programme into `s` (an openGym state draft): five routines (A–E, ids kept in

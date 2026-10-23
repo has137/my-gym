@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { painZone, painEntry, addPain, latestPain, morningAdvice, usualPain, painRepeats, jointSummary, JOINTS } from './pain.js'
+import { painZone, painEntry, addPain, latestPain, morningAdvice, usualPain, painRepeats, trainingDays, jointSummary, JOINTS } from './pain.js'
 import { freeActivityWorkout, roundsEntry, ropeEntry } from './free-activity.js'
 import { readinessResult, readinessRecord, readinessDue, QUESTIONS } from './readiness.js'
 import { testsDue, weeklyAverages, weeklyRate, backupDue, backupFileName, testsFor } from './checkups.js'
@@ -33,6 +33,23 @@ describe('the pain rule', () => {
     const log = [{ d: '2026-10-15', joint: 'ankle', v: 1 }, { d: '2026-10-18', joint: 'ankle', v: 3 }, { d: '2026-10-20', joint: 'ankle', v: 2 }, { d: '2026-09-01', joint: 'ankle', v: 9 }]
     expect(usualPain(log, 'ankle', '2026-10-24')).toBe(2)
     expect(painRepeats([{ d: '2026-10-20', v: 4 }, { d: '2026-10-22', v: 5 }, { d: '2026-10-22', v: 2 }], ['2026-10-20', '2026-10-22'])).toBe(2)
+  })
+  it('counts days, not logs: two high logs on one day are one day', () => {
+    expect(painRepeats([{ d: '2026-10-22', v: 4 }, { d: '2026-10-22', v: 6 }], ['2026-10-20', '2026-10-22'])).toBe(1)
+    expect(painRepeats([{ d: '2026-10-21', v: 7 }], ['2026-10-20', '2026-10-22'])).toBe(0)
+  })
+  it('reads the training days from programme sessions only', () => {
+    const w = [
+      { d: '2026-10-18', routineIds: ['a'] },
+      { d: '2026-10-20', routineIds: ['b'] },
+      { d: '2026-10-21', routineIds: [], mgFree: 'walk' },
+      { d: '2026-10-21', routineIds: [], mgFree: 'rounds' },
+      { d: '2026-10-22', routineIds: ['c'] },
+      { d: '2026-10-22', routineIds: ['d'] },
+    ]
+    expect(trainingDays(w)).toEqual(['2026-10-20', '2026-10-22'])
+    expect(trainingDays(w, 3)).toEqual(['2026-10-18', '2026-10-20', '2026-10-22'])
+    expect(trainingDays([])).toEqual([])
   })
   it('summarises every joint', () => {
     expect(jointSummary([], '2026-10-24').map(r => r.joint)).toEqual(JOINTS)

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
@@ -9,18 +9,19 @@
   // i18n-core RTL_LANGS is the runtime source of truth — keep this list in sync.
   try {
     var s = JSON.parse(localStorage.getItem('gym_state_v1') || '{}');
-    var l = s.lang || ((navigator.language || '').slice(0, 2) === 'ar' ? 'ar' : 'en');
+    // My gym: Arabic until the profile says otherwise.
+    var l = s.lang || 'ar';
     document.documentElement.lang = l;
     document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
   } catch (e) {}
 </script>
-<title>openGym</title>
-<meta name="description" content="Personal gym & body weight tracker">
-<meta name="theme-color" content="#0c0e12">
+<title>My gym</title>
+<meta name="description" content="My gym: home strength, boxing and joint care, built on openGym">
+<meta name="theme-color" content="#0D0E10">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="apple-mobile-web-app-title" content="openGym">
+<meta name="apple-mobile-web-app-title" content="My gym">
 <!-- use-credentials: browsers fetch the manifest without cookies, even same-origin; behind an auth
      proxy (Authelia, Cloudflare Access, Teleport…) that fetch is a login redirect and the Home Screen
      icon comes out generic. iOS 26 reads the icon from the manifest, so this is where it shows. -->
@@ -34,7 +35,7 @@
      page. Same dark and lime as the native splash. lib/boot.js takes it away the moment the
      app can draw, so it never adds a wait. -->
 <style>
-  #boot{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:#0c0e12;transition:opacity .22s ease-out}
+  #boot{position:fixed;inset:0;z-index:2147483000;display:grid;place-items:center;background:#0D0E10;transition:opacity .22s ease-out}
   #boot.out{opacity:0;pointer-events:none}
   #boot svg{width:112px;height:auto;overflow:visible}
   #boot rect,#boot ellipse{transform-box:fill-box;transform-origin:center}
@@ -44,7 +45,7 @@
   #boot .in{animation-delay:.22s}
   #boot .outer{animation-delay:.36s}
   #boot .db{animation:boot-rep 1.25s ease-in-out .75s infinite}
-  #boot ellipse{fill:#a3e635;opacity:.12;animation:boot-shadow 1.25s ease-in-out .75s infinite}
+  #boot ellipse{fill:#D2342A;opacity:.12;animation:boot-shadow 1.25s ease-in-out .75s infinite}
   @keyframes boot-bar{from{transform:scaleX(0)}}
   @keyframes boot-plate{from{transform:translateX(-40px);opacity:0}}
   @keyframes boot-plate-r{from{transform:translateX(40px);opacity:0}}
@@ -59,7 +60,7 @@
 <div id="boot" aria-hidden="true">
   <svg viewBox="80 140 352 250">
     <ellipse cx="256" cy="372" rx="150" ry="9"/>
-    <g class="db" fill="#a3e635">
+    <g class="db" fill="#D2342A">
       <rect class="bar" x="80" y="242" width="352" height="28"/>
       <rect class="pl in" x="131" y="169" width="47" height="174"/>
       <rect class="pr in" x="334" y="169" width="47" height="174"/>

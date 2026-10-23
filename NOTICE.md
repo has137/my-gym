@@ -3,6 +3,20 @@
 openGym — Copyright (C) 2026 Duarte Santos.
 openGym's own code is licensed under the **GNU AGPL v3.0** (see [LICENSE](LICENSE)).
 
+## My gym (this fork)
+
+This repository is **My gym**, a modified version of openGym made by has137 in October 2026
+(source: <https://github.com/has137/my-gym>). The changes are under the same **GNU AGPL v3.0**
+(or later); the running app links to its source at the foot of Settings, as section 13 asks. It
+is a non-commercial fork: it keeps openGym's exercise media unmodified at 180 px, together with the
+Gym visual notice below, and adds no media of its own.
+
+The fork bundles two typefaces in `frontend/src/mygym/fonts/`, both under the **SIL Open Font
+License 1.1**, with their licence texts beside the files:
+
+- **Changa**, Copyright 2018 The Changa Project Authors (`OFL-Changa.txt`)
+- **IBM Plex Sans Arabic**, Copyright 2017 IBM Corp., Reserved Font Name "Plex" (`OFL-IBMPlexSansArabic.txt`)
+
 ## App store exception
 
 As an additional permission under section 7 of the AGPL v3.0, the copyright holder permits

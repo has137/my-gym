@@ -56,6 +56,9 @@ import CoachChat from './views/CoachChat.jsx'
 import Measurements from './views/Measurements.jsx'
 import CoachIntake from './views/CoachIntake.jsx'
 import CoachSetup from './views/CoachSetup.jsx'
+// My gym: this fork's screens, tab bar and mini bar (src/mygym).
+import { MG } from './mygym/index.js'
+import { mgRoutes, MiniBar, Readiness, useMgShell } from './mygym/Routes.jsx'
 
 // last known scrollY per route, so back-navigation can put the page where it was
 const scrollPositions = new Map()
@@ -98,6 +101,7 @@ function Shell() {
   const needsMobileOnboarding = useStore(s => s.needsMobileOnboarding)
   const permSteps = useStore(s => s.permSteps)
   const langV = useLang()   // re-renders the whole shell when the language (pack) changes
+  const mg = useMgShell(MG)   // My gym: first-use questions still to do?
   useEffect(() => { setNav(navigate) }, [navigate])
   const lastEditPath = useRef(loc.pathname)
   // Any in-app route exit, browser back included, returns to the persisted draft and asks for a
@@ -230,6 +234,7 @@ function Shell() {
   // The chat owns the bottom of the screen as well: its composer sits where the tabs would be.
   // The first-launch card has no tabs either: they changed the route behind it.
   const noTabs = inWorkout || loc.pathname === '/coach' || needsMobileOnboarding || permSteps
+    || (MG && (mg.needsSetup || loc.pathname.startsWith('/timer/')))   // My gym
 
   const authed = user || isGuest
   // The boot screen in index.html covers the start; it goes once there is something to show.
@@ -242,9 +247,10 @@ function Shell() {
     </div>
   )
 
-  const view = l => (!authed ? <Login /> : needsMobileOnboarding ? <MobileOnboarding /> : permSteps ? <PermissionSteps /> : (
+  const view = l => (!authed ? <Login /> : needsMobileOnboarding ? <MobileOnboarding /> : permSteps ? <PermissionSteps /> : mg.needsSetup ? <Readiness /> : (
     <Routes location={l}>
-      <Route path="/home" element={<Home />} />
+      {MG && mgRoutes()}
+      {!MG && <Route path="/home" element={<Home />} />}
       {/* Gym check-in — switched off in Settings, the route falls through to the
           catch-all redirect below. */}
       {S.checkIn !== false && <Route path="/checkin" element={<CheckIn />} />}
@@ -253,7 +259,7 @@ function Shell() {
       <Route path="/workout" element={<Workout />} />
       <Route path="/stats" element={<Stats />} />
       <Route path="/history" element={<History />} />
-      <Route path="/library" element={<Library />} />
+      {!MG && <Route path="/library" element={<Library />} />}
       <Route path="/muscles" element={<Muscles />} />
       <Route path="/structural-balance" element={<StructuralBalance />} />
       <Route path="/progress-photos" element={<ProgressPhotos />} />
@@ -289,6 +295,7 @@ function Shell() {
           including on the sign-in screen, when the server has just ended the session. */}
       <SyncBanner />
       {!noTabs && <TabBar onStart={startFlow} />}
+      {MG && !noTabs && <MiniBar />}
       <RestTimer />
       <Modals />
       <Toast />

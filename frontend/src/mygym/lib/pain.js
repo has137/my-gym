@@ -47,10 +47,16 @@ export function usualPain(log, joint, todayISO, days = 14) {
   return vals.length % 2 ? vals[mid] : (vals[mid - 1] + vals[mid]) / 2
 }
 
-/** Logs of 4 or more for any joint across the last `sessions` training days (early deload sign). */
+/** How many of `trainingDays` had a joint logged at 4 or more (early deload sign: two in a row). */
 export function painRepeats(log, trainingDays) {
   const days = new Set(trainingDays)
-  return (log || []).filter(e => days.has(e.d) && e.v >= 4).length
+  return new Set((log || []).filter(e => days.has(e.d) && e.v >= 4).map(e => e.d)).size
+}
+
+/** The dates of the last `n` programme sessions (free activity and rounds on their own aside). */
+export function trainingDays(workouts, n = 2) {
+  const days = (workouts || []).filter(w => (w.routineIds || []).length && !w.mgFree).map(w => w.d).filter(Boolean)
+  return [...new Set(days)].sort().slice(-n)
 }
 
 /** One row per joint: latest score, its zone, and the number of logs in the last 7 days. */

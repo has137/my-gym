@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { programWeek, cycleWeek, phaseOf, rirFor, isTestWeek, shapeForPhase, earlyDeload } from './phases.js'
+import { programWeek, cycleWeek, phaseOf, rirFor, isTestWeek, shapeForPhase, earlyDeload, inEarlyDeload } from './phases.js'
 
 describe('programme week', () => {
   it('counts week 1 from the start day', () => {
@@ -42,5 +42,16 @@ describe('early deload signs', () => {
     expect(earlyDeload({}).due).toBe(false)
     expect(earlyDeload({ regressions: 3 })).toEqual({ due: true, reasons: ['regressions'] })
     expect(earlyDeload({ painRepeats: 2, badSleepDays: 5 }).reasons).toEqual(['sleep', 'pain'])
+    expect(earlyDeload({ painRepeats: 1 }).due).toBe(false)
+  })
+})
+
+describe('an early deload', () => {
+  it('runs seven days from the day it was taken', () => {
+    expect(inEarlyDeload(null, '2026-10-24')).toBe(false)
+    expect(inEarlyDeload('2026-10-24', '2026-10-24')).toBe(true)
+    expect(inEarlyDeload('2026-10-24', '2026-10-30')).toBe(true)
+    expect(inEarlyDeload('2026-10-24', '2026-10-31')).toBe(false)
+    expect(inEarlyDeload('2026-10-24', '2026-10-23')).toBe(false)
   })
 })

@@ -55,8 +55,14 @@ describe('slot entries', () => {
     expect(firstKnown('99999', '0289')).toBe('0289')
   })
 
-  it('gives every session at most four entries', () => {
-    for (const key of Object.keys(SESSIONS)) expect(sessionEntries(key, {}).length).toBeLessThanOrEqual(4)
+  it('gives every session at most four resistance entries, plus the knee protection in D', () => {
+    for (const key of Object.keys(SESSIONS)) {
+      const list = sessionEntries(key, {})
+      expect(list.filter(e => !e.mgProtect).length).toBeLessThanOrEqual(4)
+    }
+    const d = sessionEntries('D', { rungs: { knee: 0 } })
+    expect(d.at(-1)).toMatchObject({ id: '3395', sets: 2, reps: 5, mgProtect: 'knee' })
+    expect(d.at(-1).note).toContain('P')
   })
 })
 

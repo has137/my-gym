@@ -72,3 +72,12 @@ export function earlyDeload(signals = {}) {
   if ((signals.effortMissed || 0) >= 2) reasons.push('effort')
   return { due: reasons.length > 0, reasons }
 }
+
+export const EARLY_DELOAD_DAYS = 7
+
+/** Whether an early deload started on `fromISO` still runs on `todayISO`: seven days from it. */
+export function inEarlyDeload(fromISO, todayISO, days = EARLY_DELOAD_DAYS) {
+  if (!fromISO) return false
+  const age = (Date.parse(todayISO + 'T12:00:00') - Date.parse(fromISO + 'T12:00:00')) / 86400000
+  return age >= 0 && age < days
+}

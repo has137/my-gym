@@ -1,0 +1,202 @@
+/* My gym fonts, bundled so the app works offline: Changa (display) and IBM Plex Sans Arabic
+   (text), Arabic and Latin subsets. Both are under the SIL Open Font License 1.1; the licence
+   texts sit beside the files in fonts/ (OFL-Changa.txt, OFL-IBMPlexSansArabic.txt). */
+@font-face{font-family:'Changa';font-style:normal;font-weight:500 800;font-display:swap;src:url('./fonts/Changa-500-800-arabic.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1}
+@font-face{font-family:'Changa';font-style:normal;font-weight:500 800;font-display:swap;src:url('./fonts/Changa-500-800-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:url('./fonts/IBMPlexSansArabic-400-arabic.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:400;font-display:swap;src:url('./fonts/IBMPlexSansArabic-400-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:500;font-display:swap;src:url('./fonts/IBMPlexSansArabic-500-arabic.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:500;font-display:swap;src:url('./fonts/IBMPlexSansArabic-500-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url('./fonts/IBMPlexSansArabic-600-arabic.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:600;font-display:swap;src:url('./fonts/IBMPlexSansArabic-600-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/IBMPlexSansArabic-700-arabic.woff2') format('woff2');unicode-range:U+0600-06FF, U+0750-077F, U+0870-0891, U+0897-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC, U+102E0-102FB, U+10E60-10E7E, U+10EC2-10EC7, U+10EC9-10EEE, U+10EF0-10EFF, U+1EE00-1EE03, U+1EE05-1EE1F, U+1EE21-1EE22, U+1EE24, U+1EE27, U+1EE29-1EE32, U+1EE34-1EE37, U+1EE39, U+1EE3B, U+1EE42, U+1EE47, U+1EE49, U+1EE4B, U+1EE4D-1EE4F, U+1EE51-1EE52, U+1EE54, U+1EE57, U+1EE59, U+1EE5B, U+1EE5D, U+1EE5F, U+1EE61-1EE62, U+1EE64, U+1EE67-1EE6A, U+1EE6C-1EE72, U+1EE74-1EE77, U+1EE79-1EE7C, U+1EE7E, U+1EE80-1EE89, U+1EE8B-1EE9B, U+1EEA1-1EEA3, U+1EEA5-1EEA9, U+1EEAB-1EEBB, U+1EEF0-1EEF1}
+@font-face{font-family:'IBM Plex Sans Arabic';font-style:normal;font-weight:700;font-display:swap;src:url('./fonts/IBMPlexSansArabic-700-latin.woff2') format('woff2');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+
+/* ===========================================================================
+   My gym — "Ring Night" design tokens (Claude Design handoff, 2026-10-16)
+   ---------------------------------------------------------------------------
+   Mapped onto openGym's own variables (index.css), so every openGym screen —
+   the workout, the library, settings — takes the look without its rules being
+   touched. Scoped to :root[data-mg] (set by App.jsx), and stated against the
+   accent and theme attributes so it outranks openGym's own presets.
+   Red is for actions only, blue for guidance and rest, green for progress with
+   an arrow, orange for pain with a triangle: states never rely on colour alone.
+   ========================================================================== */
+:root[data-mg],
+:root[data-mg][data-accent] {
+  --bg:#0D0E10; --bg-el:#121316; --surface:#17181C; --surface-2:#212328; --surface-3:#2D3036;
+  --label:#F0EFEB; --label-2:#A0A4AB; --label-3:rgba(240,239,235,.40); --label-4:rgba(240,239,235,.20);
+  --sep:#2D3036; --sep-op:rgba(45,48,54,.8);
+  --acc:#D2342A; --acc-2:#B42318; --on-acc:#FFFFFF;
+  --acc-soft:#33150F; --acc-line:color-mix(in srgb,#D2342A 40%,transparent);
+  --red:#FF7466; --blue:#8DB2FF; --green:#45C47F; --orange:#FFB24A;
+  --mg-action-text:#FF7466; --mg-guide:#2F6BDB; --mg-guide-text:#8DB2FF; --mg-guide-tint:#142039;
+  --mg-up:#45C47F; --mg-up-tint:#10281B; --mg-steady:#A7AFBA; --mg-steady-tint:#22262C;
+  --mg-pain:#FFB24A; --mg-pain-tint:#2D2110; --mg-on-pain:#15161A;
+  --mg-hero:#1C1E23; --mg-hero-line:#2D3036; --mg-on-hero:#F0EFEB; --mg-hero-mute:#A0A4AB; --mg-hero-chip:rgba(255,255,255,.08);
+  --mg-timer-work:#170908; --mg-timer-rest:#081022;
+  --r-sm:12px; --r:14px; --r-lg:16px; --r-xl:24px; --r-card:16px;
+  --mg-font:'IBM Plex Sans Arabic',-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Tahoma,system-ui,sans-serif;
+  --mg-display:'Changa','IBM Plex Sans Arabic',Tahoma,system-ui,sans-serif;
+}
+:root[data-mg][data-theme="light"],
+:root[data-mg][data-theme="light"][data-accent] {
+  --bg:#F2F0EB; --bg-el:#F7F5F1; --surface:#FFFFFF; --surface-2:#E8E5DF; --surface-3:#D9D4CB;
+  --label:#15161A; --label-2:#595C63; --label-3:rgba(21,22,26,.42); --label-4:rgba(21,22,26,.18);
+  --sep:#D9D4CB; --sep-op:rgba(217,212,203,.9);
+  --acc:#CC2A1F; --acc-2:#B42318; --on-acc:#FFFFFF;
+  --acc-soft:#FBE6E3; --acc-line:color-mix(in srgb,#CC2A1F 38%,transparent);
+  --red:#B42318; --blue:#1B4DAD; --green:#17784A; --orange:#985000;
+  --mg-action-text:#B42318; --mg-guide:#1F57C3; --mg-guide-text:#1B4DAD; --mg-guide-tint:#E5ECF9;
+  --mg-up:#17784A; --mg-up-tint:#DFF1E6; --mg-steady:#555E69; --mg-steady-tint:#E7EAEE;
+  --mg-pain:#985000; --mg-pain-tint:#FBEDD5; --mg-on-pain:#FFFFFF;
+  --mg-hero:#16171B; --mg-hero-line:#16171B; --mg-on-hero:#F2F0EB; --mg-hero-mute:#B4B7BD; --mg-hero-chip:rgba(255,255,255,.10);
+  --mg-timer-work:#CC2A1F; --mg-timer-rest:#1F57C3;
+}
+
+/* type: IBM Plex Sans Arabic for text, Changa for titles and big numbers */
+:root[data-mg] body{font-family:var(--mg-font);letter-spacing:0}
+:root[data-mg] h1,:root[data-mg] .hdr h1,:root[data-mg] .card .big,:root[data-mg] .mg-display{font-family:var(--mg-display);letter-spacing:0;font-weight:800}
+:root[data-mg] .hdr h1{font-size:30px;line-height:1.15}
+:root[data-mg] .btn{min-height:48px;font-weight:600;letter-spacing:0}
+:root[data-mg] .btn.primary{font-family:var(--mg-display);font-weight:800}
+:root[data-mg] .card{border:1px solid var(--sep)}
+:root[data-mg] #timer .t,:root[data-mg] .mg-num{font-variant-numeric:tabular-nums}
+
+/* tab bar: five buttons, 56 px targets, 12 px labels */
+:root[data-mg] #tabbar{background:var(--surface);border-top:1px solid var(--sep)}
+:root[data-mg][data-theme="light"] #tabbar{background:var(--surface)}
+:root[data-mg] #tabbar button{min-height:56px;font-size:12px;font-weight:600;color:var(--label-2);justify-content:center}
+:root[data-mg] #tabbar button .icn{color:currentColor;font-size:24px}
+:root[data-mg] #tabbar button.on{color:var(--mg-action-text)}
+:root[data-mg] #tabbar button.start{margin-top:-22px}
+:root[data-mg] #tabbar button.start > span:not(.cir){color:var(--mg-action-text)}
+
+/* ---------------------------------------------------------- shared pieces */
+.mg-rules{display:flex;flex-direction:column;gap:4px;width:120px}
+.mg-rules i{display:block;height:3px;border-radius:2px;background:var(--acc)}
+.mg-rules i:nth-child(2){background:var(--mg-hero-mute);opacity:.5}
+.mg-rules i:nth-child(3){background:var(--mg-guide)}
+.mg-chip{display:inline-flex;align-items:center;gap:4px;min-height:28px;padding:0 12px;border-radius:999px;font-size:13px;font-weight:600;background:var(--surface-2);color:var(--label);white-space:nowrap}
+.mg-chip.act{background:var(--acc);color:var(--on-acc);font-weight:700}
+.mg-chip.up{background:var(--mg-up-tint);color:var(--mg-up)}
+.mg-chip.pain{background:var(--mg-pain-tint);color:var(--mg-pain)}
+.mg-chip.guide{background:var(--mg-guide-tint);color:var(--mg-guide-text)}
+.mg-chip.steady{background:var(--mg-steady-tint);color:var(--mg-steady)}
+.mg-chip.ghost{background:none;border:1px dashed currentColor;color:var(--label-2)}
+.mg-note{display:flex;gap:10px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:var(--mg-guide-tint);color:var(--label);font-size:14px;line-height:1.6;margin-bottom:12px}
+.mg-note .icn{flex:none;color:var(--mg-guide-text);font-size:20px;margin-top:2px}
+.mg-note b{color:var(--mg-guide-text)}
+.mg-note.pain{background:var(--mg-pain-tint)}
+.mg-note.pain .icn,.mg-note.pain b{color:var(--mg-pain)}
+.mg-sec{font-family:var(--mg-display);font-weight:700;font-size:20px;margin:22px 0 10px}
+.mg-muted{color:var(--label-2)}
+.mg-small{font-size:13px}
+.mg-ltr{direction:ltr;text-align:start;unicode-bidi:plaintext}
+.mg-row{display:flex;align-items:center;gap:12px;min-height:64px;padding:10px 14px;box-sizing:border-box;border-radius:14px;background:var(--surface);border:1px solid var(--sep);color:var(--label);text-align:start;width:100%;margin-bottom:8px}
+.mg-row.cur{border:2px solid var(--acc)}
+.mg-row.done{opacity:.75}
+.mg-row .num{width:36px;height:36px;flex:none;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--mg-display);font-weight:700;font-size:16px;background:var(--surface-2);color:var(--label)}
+.mg-row.cur .num{background:var(--acc);color:var(--on-acc)}
+.mg-row.done .num{background:var(--mg-up-tint);color:var(--mg-up)}
+.mg-row .txt{flex:1;min-width:0;display:flex;flex-direction:column;gap:1px}
+.mg-row .ttl{font-size:16px;font-weight:600;line-height:1.35}
+.mg-row .sub{font-size:12px;color:var(--label-2)}
+.mg-row .amt{display:flex;flex-direction:column;align-items:flex-end;gap:3px;flex:none}
+.mg-row .amt b{font-family:var(--mg-display);font-weight:700;font-size:17px;white-space:nowrap}
+.mg-row .thumb{width:48px;height:48px;flex:none;border-radius:10px;overflow:hidden;background:var(--surface-2)}
+.mg-seg{display:grid;gap:4px;margin:8px 0 14px}
+.mg-seg span{height:6px;border-radius:3px;background:var(--sep)}
+.mg-seg span.d{background:var(--mg-up)}
+.mg-seg span.c{background:var(--acc)}
+.mg-bottom{position:sticky;bottom:calc(76px + var(--sab));padding:12px 0 4px;background:linear-gradient(to top,var(--bg) 70%,transparent)}
+.mg-big-btn{min-height:60px;border-radius:16px;font-size:22px}
+
+/* ---------------------------------------------------------------- today */
+.mg-hdr{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:8px 0 14px}
+.mg-hdr .d{font-size:14px;color:var(--label-2)}
+.mg-hdr h1{margin:0;font-size:30px;line-height:1.15}
+.mg-iconbtn{width:48px;height:48px;flex:none;border-radius:14px;background:var(--surface);border:1px solid var(--sep);display:flex;align-items:center;justify-content:center;color:var(--label);font-size:22px}
+.mg-week{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px}
+.mg-week .day{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--label-2)}
+.mg-week .dot{width:38px;height:38px;box-sizing:border-box;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--surface-2);color:var(--label-2);font-family:var(--mg-display);font-weight:700;font-size:15px}
+.mg-week .dot.done{background:var(--mg-up-tint);color:var(--mg-up)}
+.mg-week .dot.today{background:transparent;border:2px solid var(--acc);color:var(--mg-action-text)}
+.mg-hero{background:var(--mg-hero);color:var(--mg-on-hero);border:1px solid var(--mg-hero-line);border-radius:20px;overflow:hidden;margin-bottom:12px}
+.mg-hero .in{padding:16px 20px 20px;display:flex;flex-direction:column;gap:14px}
+.mg-hero .lines{padding:16px 20px 0}
+.mg-hero .lines .mg-rules{width:auto}
+.mg-hero .kick{font-family:var(--mg-display);font-weight:600;font-size:15px;color:var(--mg-hero-mute)}
+.mg-hero h2{margin:0;font-family:var(--mg-display);font-weight:800;font-size:28px;line-height:1.2;color:var(--mg-on-hero)}
+.mg-hero .chips{display:flex;flex-wrap:wrap;gap:6px}
+.mg-hero .chips .mg-chip{background:var(--mg-hero-chip);color:var(--mg-on-hero)}
+.mg-hero .btn.primary{min-height:60px;border-radius:16px;font-size:22px}
+.mg-day{display:flex;align-items:center;gap:12px;min-height:72px;padding:12px 14px;box-sizing:border-box;border-radius:16px;background:var(--surface);border:1px solid var(--sep);color:var(--label);margin-bottom:10px;width:100%;text-align:start}
+.mg-day.sug{border:2px solid var(--acc)}
+.mg-day .n{width:44px;height:44px;flex:none;border-radius:12px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-family:var(--mg-display);font-weight:800;font-size:22px}
+.mg-day.sug .n{background:var(--acc);color:var(--on-acc)}
+.mg-day.done .n{background:var(--mg-up-tint);color:var(--mg-up)}
+.mg-day .t{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.mg-day .t b{font-size:16px;font-weight:600}
+.mg-day .t span{font-size:13px;color:var(--label-2)}
+.mg-empty{padding:20px;border-radius:16px;border:1.5px dashed var(--sep);display:flex;flex-direction:column;align-items:center;gap:8px;text-align:center;margin-bottom:12px}
+.mg-empty .ic{width:52px;height:52px;border-radius:50%;background:var(--mg-guide-tint);color:var(--mg-guide-text);display:flex;align-items:center;justify-content:center;font-size:24px}
+.mg-free{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.mg-free button{min-height:64px;border-radius:14px;background:var(--surface-2);color:var(--label);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;font-weight:600}
+.mg-free button[aria-pressed="true"]{background:var(--acc);color:var(--on-acc)}
+.mg-free button:disabled{opacity:.4}
+
+/* ---------------------------------------------------------------- mini bar */
+#mg-minibar{position:fixed;inset-inline:8px;bottom:calc(78px + var(--sab));z-index:49;display:flex;align-items:center;gap:10px;min-height:56px;padding:8px 10px 8px 14px;border-radius:16px;background:var(--mg-hero);color:var(--mg-on-hero);border:1px solid var(--mg-hero-line);box-shadow:0 8px 24px -8px rgba(0,0,0,.45);max-width:544px;margin:0 auto}
+#mg-minibar .ic{width:36px;height:36px;flex:none;border-radius:50%;background:var(--acc);color:#fff;display:flex;align-items:center;justify-content:center;font-size:18px}
+#mg-minibar .tx{flex:1;min-width:0;display:flex;flex-direction:column}
+#mg-minibar .tx b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mg-minibar .tx span{font-size:12px;color:var(--mg-hero-mute);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#mg-minibar .tm{font-family:var(--mg-display);font-weight:700;font-size:17px;font-variant-numeric:tabular-nums;direction:ltr}
+body.resting #mg-minibar{bottom:calc(166px + var(--sab))}
+/* the round timer is full screen: openGym's rest bar stays out of its controls */
+body:has(.mg-timer) #timer{display:none}
+body.mg-mini #app{padding-bottom:calc(150px + var(--sab))}
+body.mg-mini.resting #app{padding-bottom:calc(236px + var(--sab))}
+
+/* ---------------------------------------------------------- round timer */
+.mg-timer{position:fixed;inset:0;z-index:60;display:flex;flex-direction:column;padding:calc(var(--sat) + 12px) 20px calc(var(--sab) + 20px);color:#fff;background:var(--mg-timer-work);overflow-y:auto}
+.mg-timer.rest{background:var(--mg-timer-rest)}
+.mg-timer.idle{background:var(--bg);color:var(--label)}
+.mg-timer .top{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.mg-timer .top .mg-iconbtn{background:rgba(255,255,255,.12);border-color:transparent;color:inherit}
+.mg-timer.idle .top .mg-iconbtn{background:var(--surface);border-color:var(--sep)}
+.mg-timer .rnd{font-family:var(--mg-display);font-weight:700;font-size:18px}
+.mg-timer .kind{font-size:15px;opacity:.85}
+.mg-timer .clock{font-family:var(--mg-display);font-weight:800;font-size:132px;line-height:1;text-align:center;margin:28px 0 8px;font-variant-numeric:tabular-nums;direction:ltr}
+.mg-timer.rest .clock{font-size:96px}
+.mg-timer .what{text-align:center;font-size:17px;line-height:1.6;max-width:340px;margin:0 auto}
+.mg-timer .what b{display:block;font-family:var(--mg-display);font-size:22px;margin-bottom:4px}
+.mg-timer .after{text-align:center;opacity:.8;font-size:14px;margin-top:14px}
+.mg-timer .ctl{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:16px;padding-top:24px}
+.mg-timer .ctl .pp{width:96px;height:96px;border-radius:50%;background:#fff;color:#15161A;display:flex;align-items:center;justify-content:center;font-size:40px}
+.mg-timer .ctl .sm{width:56px;height:56px;border-radius:50%;background:rgba(255,255,255,.16);color:#fff;display:flex;align-items:center;justify-content:center;font-size:22px}
+.mg-timer .bar{height:6px;border-radius:3px;background:rgba(255,255,255,.2);overflow:hidden;margin-top:14px}
+.mg-timer .bar i{display:block;height:100%;background:#fff}
+
+/* ---------------------------------------------------------- scales, forms */
+.mg-scale{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:6px}
+.mg-scale button{min-height:48px;border-radius:12px;background:var(--surface-2);color:var(--label);font-family:var(--mg-display);font-weight:700;font-size:18px}
+.mg-scale button.z-ok[aria-pressed="true"]{background:var(--mg-up);color:#fff}
+.mg-scale button.z-ease[aria-pressed="true"]{background:var(--mg-pain-tint);color:var(--mg-pain);outline:2px solid var(--mg-pain)}
+.mg-scale button.z-stop[aria-pressed="true"]{background:var(--mg-pain);color:var(--mg-on-pain)}
+.mg-yn{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.mg-yn button{min-height:48px;border-radius:12px;background:var(--surface-2);color:var(--label);font-weight:600}
+.mg-yn button[aria-pressed="true"]{background:var(--acc);color:var(--on-acc)}
+.mg-field{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--sep)}
+.mg-field:last-child{border-bottom:0}
+.mg-field label{flex:1;font-size:15px;line-height:1.4}
+.mg-field input{width:88px;min-height:44px;border-radius:10px;border:1px solid var(--sep);background:var(--surface-2);color:var(--label);font-size:17px;text-align:center;font-family:var(--mg-display);font-weight:700}
+.mg-field input[type=checkbox]{width:28px;min-height:28px}
+.mg-tabs{display:grid;grid-template-columns:1fr 1fr;gap:4px;padding:4px;border-radius:14px;background:var(--surface-2);margin-bottom:14px}
+.mg-tabs button{min-height:44px;border-radius:10px;font-weight:600;color:var(--label-2)}
+.mg-tabs button[aria-selected="true"]{background:var(--surface);color:var(--label);box-shadow:0 1px 2px rgba(0,0,0,.15)}
+.mg-table{width:100%;border-collapse:collapse;font-size:14px}
+.mg-table td,.mg-table th{padding:8px 6px;border-bottom:1px solid var(--sep);text-align:start;vertical-align:top}
+.mg-table th{font-weight:600;color:var(--label-2);font-size:12px}
+.mg-list{margin:0;padding-inline-start:20px;display:flex;flex-direction:column;gap:6px;line-height:1.6}

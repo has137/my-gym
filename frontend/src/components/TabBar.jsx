@@ -6,6 +6,9 @@ import { t } from '../lib/i18n.js'
 import Icon from './Icon.jsx'
 import Elapsed from './Elapsed.jsx'
 import { useConnectionTrouble } from './SyncBanner.jsx'
+// My gym: this fork's five tabs (src/mygym/components/MgTabBar.jsx).
+import { MG } from '../mygym/index.js'
+import MgTabBar from '../mygym/components/MgTabBar.jsx'
 
 // Module scope, not TabBar's render body. Declared inside it, `Tab` was a new function on every
 // render, so React saw a different component type each time and threw the button away and built a
@@ -19,7 +22,11 @@ function Tab({ active, icon, label, onClick, dot }) {
   )
 }
 
-export default function TabBar({ onStart }) {
+export default function TabBar(props) {
+  return MG ? <MgTabBar /> : <OgTabBar {...props} />
+}
+
+function OgTabBar({ onStart }) {
   const nav = useNavigate()
   const loc = useLocation()
   const S = useStore(s => s.S)

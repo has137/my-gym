@@ -1,3 +1,13 @@
+> **My gym — a personal, non-commercial fork of openGym.**
+> This repository ([has137/my-gym](https://github.com/has137/my-gym)) is a modified version of
+> [openGym](https://github.com/DuarteSantos8/openGym) by Duarte Santos, changed by has137 in
+> October 2026: an Arabic-first home-training programme (boxing, jump rope, joint care, ankle
+> rehab phases) on top of openGym's tracker, served as a phone-only app from GitHub Pages
+> (<https://has137.github.io/my-gym/>). Everything this fork adds lives in `frontend/src/mygym`
+> and `docs/mygym`; see [docs/mygym/MYGYM.md](docs/mygym/MYGYM.md). The licence stays
+> **AGPL-3.0-or-later**, the exercise media stay Gym visual's (see [NOTICE.md](NOTICE.md)), and
+> everything below is openGym's own README, unchanged.
+
 <div align="center">
 
 <img src="assets/banner.png" alt="openGym" width="720">

@@ -3,7 +3,8 @@ import { api, setRemoteAuth } from '../lib/api.js'
 import { localTZ } from '../lib/format.js'
 import { t } from '../lib/i18n.js'
 import { registerCustom, healCustomEx } from '../lib/exercises.js'
-import { DEMO, DEMO_SEEDED } from '../lib/demo.js'
+import { DEMO, DEMO_SEEDED, STANDALONE } from '../lib/demo.js'
+import { MG, freshDefaults as mgFreshDefaults } from '../mygym/index.js'   // My gym
 import { rememberDefaultLang } from '../lib/default-lang.js'
 import { guestAllowed } from '../lib/guest.js'
 import { MOBILE, initReminderSync, nativeLoad, nativeSave, onAppActive, readJsonFile, syncReminder, writeAutoBackup, writeJsonFile } from '../lib/mobile.js'
@@ -268,6 +269,8 @@ export function freshState() {
   // Exercise animations: Small (v1.3.11), a thumbnail beside the exercise name that a tap opens,
   // so the first set is on screen without scrolling. DEF stays 'full' for a profile saved before.
   s.gifSize = 'mini'
+  // My gym: Arabic, the device's light or dark, the red accent, kg (src/mygym/index.js).
+  if (MG) mgFreshDefaults(s)
   return s
 }
 
@@ -1977,8 +1980,10 @@ export const useStore = create((set, get) => {
         return
       }
       // Demo build (GitHub Pages): no backend at all — seed once, stay in guest mode.
-      if (DEMO) {
-        if (!localStorage.getItem(DEMO_SEEDED)) {
+      // My gym's standalone build (STANDALONE) is the same without the example history: the
+      // data stays on the phone, and the weekly backup reminder keeps a copy off it.
+      if (DEMO || STANDALONE) {
+        if (DEMO && !localStorage.getItem(DEMO_SEEDED)) {
           localStorage.setItem(DEMO_SEEDED, '1')
           await get().resetDemo()
         }

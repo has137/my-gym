@@ -3,6 +3,12 @@
 Pick the part that matches what you're doing. If you just have a question, try the
 [FAQ](FAQ.md) first.
 
+## My gym (this fork)
+
+[docs/mygym/MYGYM.md](mygym/MYGYM.md): the fork's app, install and backup steps, what decides the
+next session, how to update from openGym, and the licence notes. The programme is
+[program.md](mygym/program.md), its sources [research.md](mygym/research.md).
+
 ## Using the app
 
 | Guide | Read it when |

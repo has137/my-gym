@@ -11,4 +11,6 @@
 // lands in a self-hosted bundle.
 export const DEMO = import.meta.env.VITE_DEMO === '1'
 export const DEMO_SEEDED = 'gym_demo_seeded_v1'
+// My gym: a static build with no server and no example data (GitHub Pages, data on the phone).
+export const STANDALONE = import.meta.env.VITE_STANDALONE === '1'
 export const REPO = 'https://gitlab.com/DuarteSantos8/opengym'

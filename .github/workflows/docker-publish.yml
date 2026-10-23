@@ -23,6 +23,8 @@ permissions:
 
 jobs:
   build:
+    # My gym: the fork ships no images; it is served from GitHub Pages (pages.yml).
+    if: github.repository == 'DuarteSantos8/openGym'
     runs-on: ubuntu-latest
     strategy:
       matrix:
